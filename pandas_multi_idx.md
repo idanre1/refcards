@@ -25,6 +25,13 @@ subj_id org_clip
 123     3                  2        5      [1, 2, 3]     [4, 5, 6]
 321     4                 20       50   [10, 20, 30]  [40, 50, 60]
 ```
+## slicing
+https://stackoverflow.com/questions/53927460/select-rows-in-pandas-multiindex-dataframe
+slice by 2nd level index
+```python
+df.query("two > 5")
+```
+
 # Multi col
 ## creation
 Should be created with at least 1 column in advance
