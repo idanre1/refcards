@@ -1,3 +1,6 @@
+https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda
+https://searchvirtualdesktop.techtarget.com/tip/Running-GPU-passthrough-for-a-virtual-desktop-with-Hyper-V?amp=1
+
 open power shell
 Enter-PSSession Server01
 
