@@ -30,7 +30,9 @@ $ sudo lshw -C Display
 # download driver
 https://www.cyberciti.biz/faq/ubuntu-linux-install-nvidia-driver-latest-proprietary-driver/
 https://us.download.nvidia.com/XFree86/Linux-x86_64/460.73.01/NVIDIA-Linux-x86_64-460.73.01.run
-sudo apt install nvidia-driver-460 xterm
+####sudo apt install nvidia-driver-460 xterm
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/nvidia-driver-465_465.19.01-0ubuntu1_amd64.deb
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 
 # setup nat switch
 https://tewarid.github.io/2019/06/26/port-forwarding-in-hyper-v.html
