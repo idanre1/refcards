@@ -27,19 +27,7 @@ Add-VMAssignableDevice -VMName Ubuntu -LocationPath "PCIROOT(64)#PCI(0000)#PCI(0
 $ lspci
 $ sudo lshw -C Display
 
-## remove display driver
-- Create a file at /etc/modprobe.d/blacklist-nouveau.conf
-$ sudo nano /etc/modprobe.d/blacklist-nouveau.conf
-
-- Add the content to the created file then save file
-blacklist nouveau
-options nouveau modeset=0
-
-- Regenerate the kernel initramfs then reboot
-$ sudo update-initramfs -u
-$ reboot
-
 # download driver
 https://www.cyberciti.biz/faq/ubuntu-linux-install-nvidia-driver-latest-proprietary-driver/
 https://us.download.nvidia.com/XFree86/Linux-x86_64/460.73.01/NVIDIA-Linux-x86_64-460.73.01.run
-sudo apt install nvidia-driver-460
+sudo apt install nvidia-driver-460 xterm
