@@ -31,3 +31,16 @@ $ sudo lshw -C Display
 https://www.cyberciti.biz/faq/ubuntu-linux-install-nvidia-driver-latest-proprietary-driver/
 https://us.download.nvidia.com/XFree86/Linux-x86_64/460.73.01/NVIDIA-Linux-x86_64-460.73.01.run
 sudo apt install nvidia-driver-460 xterm
+
+# setup nat switch
+https://tewarid.github.io/2019/06/26/port-forwarding-in-hyper-v.html
+New-VMSwitch -SwitchName "NATSwitch" -SwitchType Internal
+New-NetIPAddress -IPAddress 192.168.10.1 -PrefixLength 24 -InterfaceAlias "vEthernet (NATSwitch)"
+New-NetNAT -Name "NATNetwork" -InternalIPInterfaceAddressPrefix 192.168.10.0/24
+Add-NetNatStaticMapping -ExternalIPAddress "0.0.0.0/24" -ExternalPort 22 -Protocol TCP -InternalIPAddress "192.168.10.2" -InternalPort 22 -NatName NATNetwork
+
+# on vm static ip
+sunet: 192.168.10.0/24
+address: 192.168.10.2
+gateway: 192.168.10.1
+name servers: 10.50.50.50, 10.50.10.50
