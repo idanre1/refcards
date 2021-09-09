@@ -8,6 +8,7 @@ sudo mkfs.xfs /dev/sdc1
 sudo partprobe /dev/sdc1
 # mnt
 sudo mkdir /datadrive
+sudo chown $USER:$USER /datadrive
 # fstab
 sudo blkid
 /dev/sda1: LABEL="cloudimg-rootfs" UUID="11111111-1b1b-1c1c-1d1d-1e1e1e1e1e1e" TYPE="ext4" PARTUUID="1a1b1c1d-11aa-1234-1a1a1a1a1a1a"
