@@ -3,7 +3,7 @@ rm -rf .git
 
 -- recreate the repos from the current content only  
 git init  
-git branch -m master main
+git checkout -b main  
 git add .  
 git commit -m "Initial commit"  
 
