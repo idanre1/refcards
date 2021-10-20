@@ -8,20 +8,20 @@ Enter-PSSession Server01
 https://www.dell.com/support/kbdoc/en-il/000106925/how-to-configure-a-gpu-using-discrete-device-assignment-dda-on-ubuntu-guest-operating-system
 
 # hyper-v
-install gen2 ubuntu VM named "Ubuntu"
+install gen2 ubuntu VM named "ubuntu"
 
 # on host
 device-manager->goto display driver
 location path: copy the PCIE details: "PCIROOT(64)#PCI(0000)#PCI(0000)"
 then disable device
 
-Set-VM -Name Ubuntu -AutomaticStopAction TurnOff
-Set-VM -VMName Ubuntu -GuestControlledCacheTypes $true
-Set-VM -VMName Ubuntu -LowMemoryMappedIoSpace 128Mb
-Set-VM -VMName Ubuntu -HighMemoryMappedIoSpace 18000Mb
+Set-VM -Name ubuntu -AutomaticStopAction TurnOff
+Set-VM -VMName ubuntu -GuestControlledCacheTypes $true
+Set-VM -VMName ubuntu -LowMemoryMappedIoSpace 128Mb
+Set-VM -VMName ubuntu -HighMemoryMappedIoSpace 18000Mb
 
-Dismount-VMHostAssignableDevice -force -LocationPath "PCIROOT(64)#PCI(0000)#PCI(0000)"
-Add-VMAssignableDevice -VMName Ubuntu -LocationPath "PCIROOT(64)#PCI(0000)#PCI(0000)"
+Dismount-VMHostAssignableDevice -force -LocationPath "PCIROOT(17)#PCI(0000)#PCI(0000)"
+Add-VMAssignableDevice -VMName ubuntu -LocationPath "PCIROOT(17)#PCI(0000)#PCI(0000)"
 
 # on VM
 $ lspci
