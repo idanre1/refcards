@@ -31,6 +31,11 @@ slice by 2nd level index
 ```python
 df.query("two > 5")
 ```
+slice a single 2nd level by match (e.g. close from ohlc)
+take all 1st level, only take close and also drop 'close'
+```
+prices.stack().loc[(slice(None), slice('close')), :].droplevel(1)
+```
 
 # Multi col
 ## creation
