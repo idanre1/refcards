@@ -9,8 +9,14 @@
 ---
 
 # Linux shells
+## Zsh
+Complete https://devhints.io/zsh
 ## Bash
-Refcard - https://devhints.io/bash  
+### Refcard
+Complete https://devhints.io/bash  
+If-Else https://linuxize.com/post/bash-if-else-statement/
+### Brackets
+
 ```shell
 if [ "$#" -ne 1 ]; then
     echo "Illegal number of parameters"
