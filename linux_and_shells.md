@@ -9,7 +9,24 @@
 ---
 
 # Linux shells
-## bash refcard
-https://devhints.io/bash
+## Bash
+Refcard - https://devhints.io/bash  
+```shell
+if [ "$#" -ne 1 ]; then
+    echo "Illegal number of parameters"
+fi
+```
+OR
+```shell
+if test "$#" -ne 1; then
+    echo "Illegal number of parameters"
+fi
+```
+When in Bash, prefer using `[[ ]]` instead as it doesn't do word splitting and pathname expansion to its variables that quoting may not be necessary unless it's part of an expression.
+```shell
+if test [[ $# -ne 1 ]]; then
+    echo "Illegal number of parameters"
+fi
+```
 ## sh (dash) refcard
 http://eriklievaart.com/cheat/linux/shell/dash/dash.html
