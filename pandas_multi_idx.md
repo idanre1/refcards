@@ -53,3 +53,7 @@ df[symbol,'price']=np.nan
 ```python
 df.loc[today, (symbol,'fee')]   = val
 ```
+## Move 1 col level up
+```python
+df.reset_index().set_index(['timestamp','symbol']).unstack(1).swaplevel(0,1, axis=1)
+```
