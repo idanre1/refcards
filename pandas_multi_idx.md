@@ -41,7 +41,7 @@ prices.stack().loc[(slice(None), slice('close')), :].droplevel(1)
 ## creation
 Should be created with at least 1 column in advance
 ```python
-df = pd.DataFrame(columns=['idx0','idx0a'),('idx0','idx0b')])
+df = pd.DataFrame(columns=[('idx0','idx0a'),('idx0','idx0b')])
 df.columns = pd.MultiIndex.from_tuples(df.columns, names=['upper_level','lower_level'])
 ```
 ## adding new col
@@ -56,4 +56,9 @@ df.loc[today, (symbol,'fee')]   = val
 ## Move 1 col level up
 ```python
 df.reset_index().set_index(['timestamp','symbol']).unstack(1).swaplevel(0,1, axis=1)
+```
+or with pivot
+```python
+cols=df.columns[df.columns != 'symbol']
+df.reset_index().pivot(index='timestamp', columns = 'symbol', values=cols).swaplevel(0,1, axis=1)
 ```
