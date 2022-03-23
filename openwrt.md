@@ -4,8 +4,16 @@ opkg update
 opkg install tcpdump
 ```
 # procd
+Restart
+```
 killall dnsmasq
 /etc/init.d/dnsmasq start
+```
+Turn off completely
+```
+/etc/init.d/firewall disable
+/etc/init.d/firewall stop
+```
 # dnsmasq
 https://openwrt.org/ru/doc/howto/dhcp.dnsmasq
 # wireshark
