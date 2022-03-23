@@ -36,3 +36,11 @@ fi
 ```
 ## sh (dash) refcard
 http://eriklievaart.com/cheat/linux/shell/dash/dash.html
+
+---
+
+# SSH
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+`ssh-keygen -t ed25519 -C "your_email@example.com"`  
+Legacy  
+`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
