@@ -62,3 +62,5 @@ or with pivot
 cols=df.columns[df.columns != 'symbol']
 df.reset_index().pivot(index='timestamp', columns = 'symbol', values=cols).swaplevel(0,1, axis=1)
 ```
+## deleting top level index
+`df1.columns = df1.columns.droplevel()`
