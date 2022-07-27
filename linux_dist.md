@@ -32,3 +32,10 @@ cd upgrader
 # Run the executable, the name changes based on the release
  sudo env RELEASE_UPGRADE_MODE=server  ./focal --frontend=DistUpgradeViewText
 ```
+
+# pip upgrade to other python version
+```bash
+py3env
+wget https://bootstrap.pypa.io/get-pip.py
+python get-pip.py
+```
