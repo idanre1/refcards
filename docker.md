@@ -21,3 +21,5 @@ default run command, can be changed with docker run on runtime
 same as CMD but cannot be changed during runtime
 ## ENV
 expose var variable
+## VOLUME
+specifying VOLUME in the Dockerfile is not just uncommon, but it's probably a best practice to never use VOLUME. For two reasons. The first reason we have already identified: We can not specify the host path - which is a good thing because Dockerfiles should be very agnostic to the specifics of a host machine. But the second reason is people might forget to use the --rm option when running the container. One might remember to remove the container but forget to remove the volume. Plus, even with the best of human memory, it might be a daunting task to figure out which of all anonymous volumes are safe to remove.
