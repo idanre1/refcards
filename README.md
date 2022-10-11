@@ -19,3 +19,6 @@ fi
 
 ## my ip
 https://checkip.amazonaws.com/
+```python
+curl checkip.amazonaws.com
+```
