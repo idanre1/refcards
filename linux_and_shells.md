@@ -34,6 +34,19 @@ if test [[ $# -ne 1 ]]; then
     echo "Illegal number of parameters"
 fi
 ```
+### abs paths
+```bash
+# $1 stem
+base=$(basename -- $1)
+stem=${base%.*}
+# cwd relative
+CWD=`pwd`
+zipfile=`realpath $1`
+output="$CWD/$stem"
+# script path
+script_path=`readlink -f "${BASH_SOURCE:-$0}"`
+script_path=`dirname $script_path`
+```
 ## sh (dash) refcard
 http://eriklievaart.com/cheat/linux/shell/dash/dash.html
 
