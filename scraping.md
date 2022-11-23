@@ -38,6 +38,8 @@ doc.xpath("//ns:entry", namespaces={"ns":"http://example.com/test"})  # namespac
 ## lxml
 https://jessicastringham.net/2018/09/21/xml/  
 https://docs.python.org/3.6/library/xml.etree.elementtree.html
+### Siblings handling
+https://stackoverflow.com/questions/32732003/in-xpath-how-can-i-select-groups-of-following-sibling-nodes-before-and-after-an
 # xpath
 https://devhints.io/xpath
 # Examples
