@@ -66,3 +66,9 @@ df.reset_index().pivot(index='timestamp', columns = 'symbol', values=cols).swapl
 ```python
 df.columns = df.columns.droplevel()
 ```
+## slicing
+Slice 2nd level and remove it
+```python
+df1=df.loc[:, (slice(None), 'close')]
+df1.columns = df1.columns.droplevel(1)
+```
