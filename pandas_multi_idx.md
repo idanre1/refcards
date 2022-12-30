@@ -79,3 +79,7 @@ Slice 2nd level and remove it
 df1=df.loc[:, (slice(None), 'close')]
 df1.columns = df1.columns.droplevel(1)
 ```
+## get level indexes
+```python
+df.columns.remove_unused_levels.levels[0]
+```
