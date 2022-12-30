@@ -44,6 +44,13 @@ Should be created with at least 1 column in advance
 df = pd.DataFrame(columns=[('idx0','idx0a'),('idx0','idx0b')])
 df.columns = pd.MultiIndex.from_tuples(df.columns, names=['upper_level','lower_level'])
 ```
+## concating several dataframes to a single multicol
+```python
+dfl=[]
+for df in [a,b,c,d]:
+  dfl.append(df)
+df=pd.concat(dfl, axis=1, keys=[a,b,c,d])
+```
 ## adding new col
 ```python
 df[symbol,'fee']=np.nan
