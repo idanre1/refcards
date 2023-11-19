@@ -51,7 +51,8 @@ script_path=`dirname $script_path`
 http://eriklievaart.com/cheat/linux/shell/dash/dash.html
 
 ---
-
+# Echo colors
+https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
 # SSH
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 `ssh-keygen -t ed25519 -C "your_email@example.com"`  
