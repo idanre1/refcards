@@ -36,7 +36,11 @@ take all 1st level, only take close and also drop 'close'
 ```
 prices.stack().loc[(slice(None), slice('close')), :].droplevel(1)
 ```
-
+## deleting top level index
+drop level 0
+```python
+df = df.droplevel(0)
+```
 # Multi col
 ## creation
 Should be created with at least 1 column in advance
