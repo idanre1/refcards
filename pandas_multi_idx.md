@@ -86,6 +86,6 @@ df1.columns = df1.columns.droplevel(1)
 ## get level indexes
 level 0 columns:
 ```python
-df.columns=df.columns.remove_unused_levels() # Don't skip the 2 level provess, or columns will goto incostinstance state
+df.columns=df.columns.remove_unused_levels() # Don't skip the 2 level process, or columns will goto incostinstance state
 df.columns.remove_unused_levels().levels[0]
 ```
