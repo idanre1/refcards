@@ -1,6 +1,11 @@
 # Refcards
 Cheat sheets for things I want to remember
 
+## Cmd line
+```python
+if __name__== '__main__':
+```
+
 ## Pandas
 https://github.com/firmai/pandasvault
 
