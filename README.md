@@ -3,7 +3,7 @@ Cheat sheets for things I want to remember
 
 ## Cmd line
 ```python
-if __name__== '__main__':
+if __name__ == '__main__':
 ```
 
 ## Pandas
