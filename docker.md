@@ -29,3 +29,9 @@ specifying VOLUME in the Dockerfile is not just uncommon, but it's probably a be
 cd (where Dockerfile)
 docker build -t <app_name> .
 ```
+# Install
+Docker without sudo prefix  
+https://docs.docker.com/engine/install/linux-postinstall/  
+```bash
+
+```
