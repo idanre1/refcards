@@ -33,5 +33,5 @@ docker build -t <app_name> .
 Docker without sudo prefix  
 https://docs.docker.com/engine/install/linux-postinstall/  
 ```bash
-
+sudo usermod -aG docker $USER
 ```
