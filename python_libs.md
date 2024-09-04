@@ -7,3 +7,6 @@ print('\n'.join(sys.path))
 ```python
 help("modules")
 ```
+# Work on research as in src dir
+import sys
+sys.path.append('../src')
