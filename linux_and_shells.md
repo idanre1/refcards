@@ -47,6 +47,10 @@ output="$CWD/$stem"
 script_path=`readlink -f "${BASH_SOURCE:-$0}"`
 script_path=`dirname $script_path`
 ```
+### edit system files
+```bash
+sudo sh -c "echo 'set background=dark' >> /root/.vimrc"
+```
 ## sh (dash) refcard
 http://eriklievaart.com/cheat/linux/shell/dash/dash.html
 
