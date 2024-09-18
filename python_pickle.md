@@ -12,7 +12,7 @@ with open(f'{dumpname}.pickle', 'rb') as f:
 ```
 # freeze python
 ```sh
-mkdir freeze
+mkdir -p freeze
 python --version > freeze/pyver.freeze
 pip freeze -l > freeze/venv.freeze
 ```
