@@ -15,3 +15,7 @@ ax=f.add_subplot(1,N,i)
 import matplotlib_inline.backend_inline
 matplotlib_inline.backend_inline.set_matplotlib_formats('svg')
 ```
+# Add secondary axis
+```python
+ax2 = ax1.twinx()
+```
