@@ -17,6 +17,9 @@ old release are at: ` http://old-releases.ubuntu.com`
 # release upgrade
 `sudo do-release-upgrade`
 
+## Enable third parties sources after release upgrade
+https://askubuntu.com/questions/916370/how-to-enable-disabled-third-party-sources-from-command-line-after-upgrade?newreg=2c47c458939047c59f27dbf806828a8c
+
 # legacy release upgrade
 http://old-releases.ubuntu.com/ubuntu/dists/  
 https://wiki.ubuntu.com/Releases  
