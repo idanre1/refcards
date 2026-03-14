@@ -42,6 +42,7 @@ New-VMSwitch -SwitchName "NATSwitch" -SwitchType Internal
 New-NetIPAddress -IPAddress 192.168.10.1 -PrefixLength 24 -InterfaceAlias "vEthernet (NATSwitch)"
 New-NetNAT -Name "NATNetwork" -InternalIPInterfaceAddressPrefix 192.168.10.0/24
 Add-NetNatStaticMapping -ExternalIPAddress "0.0.0.0/24" -ExternalPort 22 -Protocol TCP -InternalIPAddress "192.168.10.2" -InternalPort 22 -NatName NATNetwork
+Set-DnsClient -InterfaceAlias "vEthernet (NATSwitch)" -RegisterThisConnectionsAddress $false
 
 # on vm static ip
 sunet: 192.168.10.0/24
