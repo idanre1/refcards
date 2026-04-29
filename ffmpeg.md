@@ -11,6 +11,11 @@ filename=<infile>
 ffmpeg -i $filename -vf scale=720:-1 -c:v libx264 -crf 18 -preset veryslow -c:a copy downscaled_${filename}
 ffmpeg -i $filename -vf scale=-1:720 -c:v libx264 -crf 18 -preset veryslow -c:a copy downscaled_${filename}
 ```
+# Switch to mp4 container
+Movefast makes mp4 to start the play quickly
+```sh
+ffmpeg -i $filename -c copy -movflags +faststart output.mp4
+```
 # Process directory
 https://stackoverflow.com/questions/9913032/how-can-i-extract-audio-from-video-with-ffmpeg
 ```sh
