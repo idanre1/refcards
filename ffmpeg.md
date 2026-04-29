@@ -19,5 +19,13 @@ ffmpeg -i $filename -c copy -movflags +faststart output.mp4
 # Process directory
 https://stackoverflow.com/questions/9913032/how-can-i-extract-audio-from-video-with-ffmpeg
 ```sh
-mkdir converted; for f in *.mp4; do ffmpeg -i "$f" "converted/conv.aac"; done
+mkdir converted; for f in *.mp4; do ffmpeg -i "$f" "converted/$f.aac"; done
+```
+Using python
+```sh
+python3 -c 'from pathlib import Path; import subprocess
+for p in Path(".").iterdir():
+    if p.is_file() and p.suffix.lower()==".ts":
+        out = p.with_suffix(".mp4")  # replace .ts -> .mp4
+        subprocess.run(["ffmpeg","-hide_banner","-y","-i",str(p),"-c","copy","-movflags","+faststart",str(out)], check=False)'
 ```
